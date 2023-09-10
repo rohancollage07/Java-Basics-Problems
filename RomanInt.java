@@ -2,8 +2,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RomanInt {
-    public static void main(String[] args) {
-        Map<Character, Integer> map = new HashMap<>();
+
+  public static void main(String[] args) {
+    Map<Character, Integer> map = new HashMap<>();
 
     map.put('I', 1);
     map.put('V', 5);
@@ -28,15 +29,17 @@ public class RomanInt {
 
     //Method 2
 
-     String s = "IX";
-        int result = 0;
-        for(int i =0; i < s.length();i++){
-            if(i+i < s.length() && map.get(s.charAt(i)) < map.get(s.charAt(i+1))){
-                result = result - map.get(s.charAt(i));
-            }else{
-                result = result + map.get(s.charAt(i));
-            }
-        }
-        System.out.println(result);
+    String s = "CXXV";
+    int result = 0;
+    for (int i = 0; i < s.length(); i++) {
+      if (
+        i + i < s.length() && map.get(s.charAt(i)) < map.get(s.charAt(i + 1))
+      ) {
+        result = result - map.get(s.charAt(i));
+      } else {
+        result = result + map.get(s.charAt(i));
+      }
     }
+    System.out.println(result);
+  }
 }
