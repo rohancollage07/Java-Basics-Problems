@@ -1,6 +1,9 @@
 
 
 public class REvStar {
+      /**
+       * @param args
+       */
       public static void main(String[] args) {
          int n = 4;
     int m = 5 ;
@@ -11,4 +14,5 @@ public class REvStar {
         }
         System.out.println();
      }
+}
 }
